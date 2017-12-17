@@ -29,16 +29,16 @@ export class LoginComponent implements OnInit {
 
     this.usersService.getUserByEmail(formData.email).subscribe(
       (user) => {
-        console.log(user);
-        /*if(user) {
-          if(user.password === formData.password) {
-            //
+        // console.log(user);
+        if(user) {
+          if(user['password'] === formData.password) {
+            alert('пароль верный');
           } else {
             alert('пароль не верный');
           }
         } else {
           alert('такого пользователя нет');
-        }*/
+        }
       },
       err => console.log(err)
     );
