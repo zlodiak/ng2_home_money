@@ -1,9 +1,28 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "users": [
+    { 
+    	"id": 1, 
+    	"email": "admin@ad.ad", 
+    	"password": "adminadmin",
+    	"name": "admin"
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "bill": [
+    { 
+    	"value": 100000, 
+    	"currency": "RUB"
+    }
   ],
-  "profile": { "name": "typicode" }
+  "categories": [
+		{ 
+	  	"name": "дом", 
+	  	"capacity": 15000, 
+	  	"id": 1
+	  },
+		{ 
+	  	"name": "еда", 
+	  	"capacity": 10000, 
+	  	"id": 2
+	  }
+  ]
 }

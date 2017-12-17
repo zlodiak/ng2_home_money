@@ -1,16 +1,35 @@
 <p>Войдите</p>
 
-<form>
-	<div class="line">
-		<input class="email" id="email" placeholder="email" type="email">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+	<div class="line" [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
+		<input class="email" id="email" placeholder="email" type="text" formControlName="email">
+		<span 
+			class="form-help-text" 
+			*ngIf="form.get('email').invalid && form.get('email').touched"
+		>
+			<span *ngIf="form.get('email')['errors']['required']">email не может быть пустым</span>
+			<span *ngIf="form.get('email')['errors']['email']">введите корректный email</span>
+		</span>
 	</div>
 
-	<div class="line">
-		<input class="password" id="password" placeholder="password" type="password">
+	<div class="line" [ngClass]="{'has-error': form.get('password').invalid && form.get('password').touched}">
+		<input class="password" id="password" placeholder="password" type="password" formControlName="password">
+		<span 
+			class="form-help-text" 
+			*ngIf="form.get('password').invalid && form.get('password').touched"
+		>
+			<span *ngIf="form.get('password')['errors']['required']">пароль не может быть пустым</span>
+			<span *ngIf="form.get('password')['errors']['minlength']">
+				пароль должен быть больше 
+				{{ form.get('password')['errors']['minlength']['requiredLength'] }}
+				символов. сейчас 
+				{{ form.get('password')['errors']['minlength']['actualLength'] }}
+			</span>
+		</span>		
 	</div>	
 
 	<div class="line">
-		<button class="submit" id="submit" type="submit">Войти</button>
+		<button class="submit" id="submit" type="submit" [disabled]="form.invalid">Войти</button>
 	</div>	
 
 	<p>или</p>
