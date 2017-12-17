@@ -1,5 +1,7 @@
 <p>Войдите</p>
 
+<div class="alert alert-{{message.type}}" *ngIf="message.text">{{ message.text }}</div>
+
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 	<div class="line" [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
 		<input class="email" id="email" placeholder="email" type="text" formControlName="email">

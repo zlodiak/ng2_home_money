@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { UsersService } from '../../shared/services/users.service';
 import { User } from '../../shared/models/user.model';
+import { Message } from '../../shared/models/message.model';
 
 @Component({
   selector: 'wfm-login',
@@ -11,33 +12,46 @@ import { User } from '../../shared/models/user.model';
 })
 export class LoginComponent implements OnInit {
 
-	private form: FormGroup;
+  private form: FormGroup;
+	private message: Message;
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
+    this.message = {
+      type: 'danger',
+      text: ''
+    };
   	this.form = new FormGroup({
   		'email': new FormControl(null, [Validators.required, Validators.email]),
   		'password': new FormControl(null, [Validators.required, Validators.minLength(6)])
   	});
   }
 
+  private showMessage(text: string, type: string = 'danger') {
+    this.message = {
+      type: type,
+      text: text
+    };
+
+    setTimeout(() => {
+       this.message['text'] = '';
+    }, 5000);
+  }
+
   onSubmit() {
   	const formData = this.form.value;
 
-    console.log(formData.email);
-
     this.usersService.getUserByEmail(formData.email).subscribe(
       (user) => {
-        // console.log(user);
         if(user) {
-          if(user['password'] === formData.password) {
-            alert('пароль верный');
+          if(user.password === formData.password) {
+            this.showMessage('пароль верный', 'success');
           } else {
-            alert('пароль не верный');
+            this.showMessage('пароль не верный');
           }
         } else {
-          alert('такого пользователя нет');
+          this.showMessage('такого пользователя нет');
         }
       },
       err => console.log(err)
