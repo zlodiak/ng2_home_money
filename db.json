@@ -14,27 +14,9 @@
     },
     {
       "email": "admin@ad.ad3",
-      "password": "adminadmin3",
-      "name": "3",
+      "password": "adminadmin",
+      "name": "fds",
       "id": 3
-    },
-    {
-      "email": "admin@ad.ad4",
-      "password": "adminadmin4",
-      "name": "4",
-      "id": 4
-    },
-    {
-      "email": "admin@ad.ad5",
-      "password": "adminadmin5",
-      "name": "555",
-      "id": 5
-    },
-    {
-      "email": "admin@ad.ad7",
-      "password": "adminadmin7",
-      "name": "7",
-      "id": 6
     }
   ],
   "bill": [
