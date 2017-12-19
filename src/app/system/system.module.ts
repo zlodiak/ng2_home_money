@@ -6,6 +6,7 @@ import { SystemRoutingModule } from './system-routing.module';
 import { BillService } from './shared/services/bill.service'
 
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { MomentPipe } from './shared/parse/moment.pipe';
 
 import { BillPageComponent } from './bill-page/bill-page.component';
 import { HistoryPageComponent } from './history-page/history-page.component';
@@ -25,6 +26,7 @@ import { CurrencyCardComponent } from './bill-page/currency-card/currency-card.c
 		SystemRoutingModule
 	],
 	declarations: [
+		MomentPipe,
 		DropdownDirective,
 		SystemComponent, 
 		BillPageComponent, 
