@@ -13,21 +13,39 @@ import { Bill } from '../shared/models/bill.model'
 })
 export class BillPageComponent implements OnInit, OnDestroy {
 
-	sub: Subscription;
+  private subCurr: Subscription;
+	private subBillCurr: Subscription;
+
+  private currency: any;
+  private bill: Bill;
+
+  private isLoaded: boolean = false;
 
   constructor(private billService: BillService) { }
 
   ngOnInit() {
-  	this.sub = Observable.combineLatest(
+  	this.subBillCurr = Observable.combineLatest(
   		this.billService.getBill(),
   		this.billService.getCurrency()
   	).subscribe((data: [Bill, any]) => {
   		console.log(data);
+      this.bill = data[0];
+      this.currency = data[1];
+      this.isLoaded = true;
   	})
   }
 
   ngOnDestroy() {
-  	this.sub.unsubscribe();
+    this.subBillCurr.unsubscribe();
+  	this.subCurr.unsubscribe();
+  }
+
+  private onRefresh() {
+    this.isLoaded = false;
+    this.subCurr = this.billService.getCurrency().delay(1000).subscribe((currency: any) => {
+      this.currency = currency;
+      this.isLoaded = true;
+    });
   }
 
 }

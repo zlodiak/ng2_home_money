@@ -1,0 +1,24 @@
+.wrap{
+
+	.header{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;		
+	}
+
+	.cells{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: flex-start;	
+		margin-top: 20px;
+
+		.cell{
+			width: 49%;
+			background: lightblue;
+		}		
+	}
+
+}
+

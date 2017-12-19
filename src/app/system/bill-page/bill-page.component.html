@@ -1,6 +1,13 @@
 <div class="wrap">
-	<div class="header"></div>
+	<div class="header">
+		<div class="info">штащ</div>
+		<button class="refresh" (click)="onRefresh()">обновить</button>
+	</div>
 
-	<wfm-bill-card></wfm-bill-card>
-	<wfm-currency-card></wfm-currency-card>
+	<div class="row" *ngIf="!isLoaded">loading</div>
+
+	<div class="row cells" *ngIf="isLoaded">
+		<wfm-bill-card class="cell left" [bill]="bill" [currency]="currency"></wfm-bill-card>
+		<wfm-currency-card class="cell right" [bill]="bill" [currency]="currency"></wfm-currency-card>
+	</div>
 </div>

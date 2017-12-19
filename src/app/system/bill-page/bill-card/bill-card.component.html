@@ -1,3 +1,15 @@
+<strong>счёт</strong>
+
 <div class="bill">
-	bill
+	<div class="rub">
+		rub: {{ bill[0].value | number:'1.2' }}
+	</div>
+
+	<div class="eur">
+		eur: {{ euro | number:'1.2' }}
+	</div>
+
+	<div class="usd">
+		usd: {{ dollar | number:'1.2' }}
+	</div>			
 </div>
