@@ -1,0 +1,11 @@
+<div class="header-inner">
+	<div class="cell date">{{ date | date:'dd:MM:yyyy' }}</div>
+
+	<div class="cell name-outer" wfmDropdown>
+		<div class="name">{{ user.name }}</div>
+		<ul>
+			<li><a [routerLink]="['/system', 'records']">сделать запись</a></li>
+			<li><a (click)="onLogout()">выйти</a></li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+.header-inner{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	.cell{
+		width: 50%;
+
+		&.name-outer{
+
+			.name{
+
+			}
+
+			ul{
+				display: none;
+
+				li{
+
+				}
+			}
+
+			&.open{
+
+				ul{
+					display: block;
+				}				
+			}
+		}
+	}
+}
