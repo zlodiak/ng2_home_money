@@ -19,12 +19,14 @@
       "id": 3
     }
   ],
+
   "bill": [
     {
       "value": 100000,
       "currency": "RUB"
     }
   ],
+  
   "categories": [
     {
       "name": "дом",
