@@ -24,15 +24,15 @@ export class RecordsPageComponent implements OnInit {
     		this.isLoaded = true;
     	}
     );
-  }
+  };
 
   newCategoryAdd(category: Category) {
   	this.categories.push(category);
-  }
+  };
 
   categoryWasEdited(category: Category) {
     const index = this.categories.findIndex(c => c.id === category.id);
     this.categories[index] = category;
-  }
+  };
 
 }

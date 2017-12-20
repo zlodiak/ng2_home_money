@@ -1,7 +1,7 @@
 <div class="wrap">
 	<strong>создать событие</strong>
 	<br>
-	<!-- <div class="alert alert-{{ message.type }}" *ngIf="message.text">{{ message.text }}</div> -->
+	<div class="alert alert-{{ message.type }}" *ngIf="message.text">{{ message.text }}</div>
 	<form id="ngForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
 		<div class="line">
 			<label>выберите категорию</label>
@@ -30,7 +30,7 @@
 			<input 	class="form-control" 
 							type="number" 
 							id="amount" 
-							name="capacity" 
+							name="amount" 
 							#amount="ngModel" 
 							required 
 							[ngModel]="1" 
@@ -43,7 +43,7 @@
 			<input 	class="form-control" 
 							type="text" 
 							id="description" 
-							name="capacity" 
+							name="description" 
 							ngModel
 							#description="ngModel" 							
 							required>

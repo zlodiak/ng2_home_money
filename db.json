@@ -22,7 +22,8 @@
   "bill": [
     {
       "value": 100000,
-      "currency": "RUB"
+      "currency": "RUB",
+      "id": 1
     }
   ],
   "categories": [
@@ -32,44 +33,19 @@
       "id": 1
     },
     {
-      "name": "еда2",
+      "name": "еда2222",
       "capacity": 100002,
       "id": 2
-    },
-    {
-      "name": "qqq",
-      "capacity": 1,
-      "id": 3
-    },
-    {
-      "name": "22222",
-      "capacity": 1,
-      "id": 4
-    },
-    {
-      "name": "www",
-      "capacity": 1,
-      "id": 5
-    },
-    {
-      "name": "eee",
-      "capacity": 1,
-      "id": 6
-    },
-    {
-      "name": "rr",
-      "capacity": 1,
-      "id": 7
-    },
-    {
-      "name": "g",
-      "capacity": 1,
-      "id": 8
     },
     {
       "name": "rt",
       "capacity": 4,
       "id": 9
+    },
+    {
+      "name": "df",
+      "capacity": 1,
+      "id": 10
     }
   ],
   "events": [
@@ -79,23 +55,15 @@
       "amount": 1300,
       "category": 1,
       "date": "13.06.2017 19:49:02",
-      "description": "купил авто"     
+      "description": "купил авто"
     },
     {
-      "id": 2,
       "type": "income",
-      "amount": 130,
-      "category": 2,
-      "date": "13.06.2017 19:49:02",
-      "description": "купил dsf"     
-    },
-    {
-      "id": 2,
-      "type": "outcome",
-      "amount": 15500,
+      "amount": 13,
       "category": 1,
-      "date": "13.06.2017 19:49:02",
-      "description": "e,kb авто"     
-    }        
+      "date": "20.12.2017 22:07:45",
+      "description": "d",
+      "id": 6
+    }
   ]
 }
