@@ -1,3 +1,55 @@
-<p>
-  add-event works!
-</p>
+<div class="wrap">
+	<strong>создать событие</strong>
+	<br>
+	<!-- <div class="alert alert-{{ message.type }}" *ngIf="message.text">{{ message.text }}</div> -->
+	<form id="ngForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+		<div class="line">
+			<label>выберите категорию</label>
+			<select class="form-control" 
+							[ngModel]="1" 
+							required 
+							name="category" 
+							ngModel>
+				<option *ngFor="let c of categories" [value]="c.id">{{ c.name }}</option>
+			</select>
+		</div>
+
+		<div class="line">
+			<label>выберите тип</label>
+
+			<div *ngFor="let t of types">
+				<label>
+					<input type="radio" name="type" class="radio" [value]="t.type" required [ngModel]="'outcome'">
+					<span>{{ t.label }}</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="line" [ngClass]="{'has-error': amount.invalid && amount.touched}">
+			<label>введите лимит</label>
+			<input 	class="form-control" 
+							type="number" 
+							id="amount" 
+							name="capacity" 
+							#amount="ngModel" 
+							required 
+							[ngModel]="1" 
+							min="1">
+			<span class="form-help-text" *ngIf="amount.invalid && amount.touched">поле не может быть пустым</span>
+		</div>	
+
+		<div class="line" [ngClass]="{'has-error': description.invalid && description.touched}">
+			<label>введите описание</label>
+			<input 	class="form-control" 
+							type="text" 
+							id="description" 
+							name="capacity" 
+							ngModel
+							#description="ngModel" 							
+							required>
+			<span class="form-help-text" *ngIf="description.invalid && description.touched">поле не может быть пустым</span>
+		</div>			
+
+		<button class="btn" type="submit" [disabled]="f.invalid">создать</button>
+	</form>
+</div>

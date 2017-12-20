@@ -65,6 +65,37 @@
       "name": "g",
       "capacity": 1,
       "id": 8
+    },
+    {
+      "name": "rt",
+      "capacity": 4,
+      "id": 9
     }
+  ],
+  "events": [
+    {
+      "id": 2,
+      "type": "outcome",
+      "amount": 1300,
+      "category": 1,
+      "date": "13.06.2017 19:49:02",
+      "description": "купил авто"     
+    },
+    {
+      "id": 2,
+      "type": "income",
+      "amount": 130,
+      "category": 2,
+      "date": "13.06.2017 19:49:02",
+      "description": "купил dsf"     
+    },
+    {
+      "id": 2,
+      "type": "outcome",
+      "amount": 15500,
+      "category": 1,
+      "date": "13.06.2017 19:49:02",
+      "description": "e,kb авто"     
+    }        
   ]
 }

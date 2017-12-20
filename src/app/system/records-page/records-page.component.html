@@ -7,7 +7,7 @@
 
 	<div class="cells-outer" *ngIf="isLoaded">
 		<div class="cells">
-			<wfm-add-event class="cell"></wfm-add-event>
+			<wfm-add-event class="cell" [categories]="categories"></wfm-add-event>
 			<wfm-add-category class="cell" (onCategoryAdd)="newCategoryAdd($event)"></wfm-add-category>
 		</div>
 
