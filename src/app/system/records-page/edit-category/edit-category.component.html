@@ -1,3 +1,32 @@
-<p>
-  edit-category works!
-</p>
+<div class="wrap">
+	<strong>редактировать категорию</strong>
+	<br>
+	<div class="alert alert-{{ message.type }}" *ngIf="message.text">{{ message.text }}</div>
+	<form id="ngForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+		<div class="line">
+			<label>выберите категорию</label>
+			<select class="form-control" 
+							[(ngModel)]="currentCategoryId" 
+							(change)="onCategoryChange()" 
+							[ngModelOptions]="{standalone: true}">
+				<option *ngFor="let c of categories" [value]="c.id">
+					{{ c.name }}
+				</option>
+			</select>
+		</div>
+
+		<div class="line" [ngClass]="{'has-error': name.invalid && name.touched}">
+			<label>название категории</label>
+			<input class="form-control" type="text" id="category-name" name="name" #name="ngModel" required [ngModel]="currentCategory.name">
+			<span class="form-help-text" *ngIf="name.invalid && name.touched">название  категории не может быть пустым</span>
+		</div>
+
+		<div class="line" [ngClass]="{'has-error': capacity.invalid && capacity.touched}">
+			<label>введите лимит</label>
+			<input class="form-control" type="number" id="category-value" name="capacity" #capacity="ngModel" required [ngModel]="currentCategory.capacity" min="1">
+			<span class="form-help-text" *ngIf="capacity.invalid && capacity.touched">поле не может быть пустым</span>
+		</div>	
+
+		<button class="btn" type="submit" [disabled]="f.invalid">изменить</button>
+	</form>
+</div>

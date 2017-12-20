@@ -27,54 +27,44 @@
   ],
   "categories": [
     {
-      "name": "дом",
-      "capacity": 15000,
+      "name": "dдом23",
+      "capacity": 150122,
       "id": 1
     },
     {
-      "name": "еда",
-      "capacity": 10000,
+      "name": "еда2",
+      "capacity": 100002,
       "id": 2
     },
     {
-      "name": "",
+      "name": "qqq",
       "capacity": 1,
       "id": 3
     },
     {
-      "name": "ddd",
+      "name": "22222",
       "capacity": 1,
       "id": 4
     },
     {
-      "name": "ddd3",
-      "capacity": 3,
+      "name": "www",
+      "capacity": 1,
       "id": 5
     },
     {
-      "name": "ddd3",
-      "capacity": 3,
+      "name": "eee",
+      "capacity": 1,
       "id": 6
     },
     {
-      "name": "",
+      "name": "rr",
       "capacity": 1,
       "id": 7
     },
     {
-      "name": "",
+      "name": "g",
       "capacity": 1,
       "id": 8
-    },
-    {
-      "name": "",
-      "capacity": 1,
-      "id": 9
-    },
-    {
-      "name": "vd",
-      "capacity": 1,
-      "id": 10
     }
   ]
 }

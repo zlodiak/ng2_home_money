@@ -1,12 +1,18 @@
 <div class="wrap">
 	<div class="header">страница записей</div>
 
-	<div class="cells">
-		<wfm-add-event class="cell"></wfm-add-event>
-		<wfm-add-category class="cell" (onCategoryAdd)="newCategoryAdd($event)"></wfm-add-category>
+	<div class="cells-outer" *ngIf="!isLoaded">
+		loading...
 	</div>
 
-	<div class="cells">
-		<wfm-edit-category class="cell"></wfm-edit-category>
+	<div class="cells-outer" *ngIf="isLoaded">
+		<div class="cells">
+			<wfm-add-event class="cell"></wfm-add-event>
+			<wfm-add-category class="cell" (onCategoryAdd)="newCategoryAdd($event)"></wfm-add-category>
+		</div>
+
+		<div class="cells">
+			<wfm-edit-category class="cell" [categories]="categories" (onCategoryEdit)="categoryWasEdited($event)"></wfm-edit-category>
+		</div>
 	</div>
 </div>
