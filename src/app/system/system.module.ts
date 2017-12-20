@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common'
 import { SharedModule } from '../shared/shared.module';
 import { SystemRoutingModule } from './system-routing.module';
 import { BillService } from './shared/services/bill.service'
+import { CategoriesService } from './shared/services/categories.service'
 
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { MomentPipe } from './shared/parse/moment.pipe';
@@ -39,6 +40,6 @@ import { EditCategoryComponent } from './records-page/edit-category/edit-categor
 		SidebarComponent, 
 		HeaderComponent, BillCardComponent, CurrencyCardComponent, AddEventComponent, AddCategoryComponent, EditCategoryComponent
 	],
-	providers: [BillService]
+	providers: [BillService, CategoriesService]
 })
 export class SystemModule{}

@@ -1,3 +1,15 @@
-<p>
-  add-category works!
-</p>
+<form id="ngForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+	<div class="line" [ngClass]="{'has-error': name.invalid && name.touched}">
+		<label>название категории</label>
+		<input class="form-control" type="text" id="category-name" name="name" #name="ngModel" required ngModel>
+		<span class="form-help-text" *ngIf="name.invalid && name.touched">название  категории не может быть пустым</span>
+	</div>
+
+	<div class="line" [ngClass]="{'has-error': capacity.invalid && capacity.touched}">
+		<label>введите лимит</label>
+		<input class="form-control" type="number" id="category-value" name="capacity" #capacity="ngModel" required [ngModel]="1" min="1">
+		<span class="form-help-text" *ngIf="capacity.invalid && capacity.touched">поле не может быть пустым</span>
+	</div>	
+
+	<button class="btn" type="submit">добавить</button>
+</form>
