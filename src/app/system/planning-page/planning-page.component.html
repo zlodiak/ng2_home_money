@@ -1,3 +1,26 @@
-<p>
-  planning-page works!
-</p>
+<div class="wrap">
+	<div class="header">страница планирования</div><hr>
+
+	<section class="section" *ngIf="isLoaded">
+		<div class="line">
+			общий остаток: <span>{{ bill[0].value | number:'1.2' }}</span>
+		</div>
+
+		<hr>
+
+		<div class="line" *ngFor="let c of categories">
+			<div class="name">
+				<span class="indicator" [ngStyle]="{width: getCatPercent(c)}">{{ c.name }}</span>		
+				<span>{{ getCatPercent(c) }}</span>		
+				<span>{{ getCatColorClass(c) }}</span>
+			</div>
+			<div class="val outcome">{{ getCategoryCost(c) | number:'1.2' }}</div>
+			<div class="val capacity">{{ c.capacity | number:'1.2' }}</div>
+			<div class="val minus">{{ c.capacity - getCategoryCost(c) | number:'1.2' }}</div>
+		</div>
+	</section>
+
+	<section class="section" *ngIf="!isLoaded">
+		loading...
+	</section>
+</div>	

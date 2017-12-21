@@ -21,7 +21,7 @@
   ],
   "bill": [
     {
-      "value": 100000,
+      "value": 0,
       "currency": "RUB",
       "id": 1
     }
@@ -52,17 +52,49 @@
     {
       "id": 2,
       "type": "outcome",
-      "amount": 1300,
+      "amount": 130000,
       "category": 1,
       "date": "13.06.2017 19:49:02",
       "description": "купил авто"
     },
     {
-      "type": "income",
+      "id": 2,
+      "type": "outcome",
       "amount": 13,
       "category": 1,
+      "date": "13.06.2017 19:49:02",
+      "description": "купил 2 авто"
+    },
+    {
+      "id": 3,
+      "type": "income",
+      "amount": 1300,
+      "category": 2,
+      "date": "13.06.2017 19:49:02",
+      "description": "купил hbh"
+    },
+    {
+      "id": 4,
+      "type": "outcome",
+      "amount": 100,
+      "category": 2,
+      "date": "13.06.2017 19:49:02",
+      "description": "купил авто"
+    },
+    {
+      "type": "income",
+      "amount": 123,
+      "category": 2,
       "date": "20.12.2017 22:07:45",
       "description": "d",
+      "id": 5
+    },
+    {
+      "type": "outcome",
+      "amount": 100000,
+      "category": 9,
+      "date": "21.12.2017 19:57:43",
+      "description": "teet",
       "id": 6
     }
   ]
