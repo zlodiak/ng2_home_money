@@ -79,7 +79,7 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
 
   onFilterApply(filterData) {
     this.toggleFilterVisibility(false);
-    this.filteredEvents();
+    this.setOriginalEvents();
     console.log(filterData); 
 
     const startPeriod = moment().startOf(filterData.period).startOf('d');
@@ -88,7 +88,7 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
     this.filteredEvents = this.filteredEvents.filter((e) => {
       return filterData.types.indexOf(e.type) !== -1;
     })
-    .filter(() => {
+    .filter((e) => {
       return filterData.categories.indexOf(e.category.toString()) !== -1;
     })
     .filter((e) => {
