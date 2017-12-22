@@ -6,3 +6,16 @@
 	color: green;
 }
 
+.menu{
+	
+	.dropdown-menu{
+		display: none;
+	}
+
+	&.open{
+
+		.dropdown-menu{
+			display: block;
+		}
+	}
+}

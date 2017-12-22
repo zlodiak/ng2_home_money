@@ -1,4 +1,22 @@
 <section class="section">
+	<div class="search-area">
+		<input class="form-control" 
+						type="text"  
+						[placeholder]="searchPlaceholder" 
+						[(ngModel)]="sarchValue">{{sarchValue}}--{{searchField}}
+
+		<div class="menu" wfmDropdown>
+			<button type="button" class="btn">параметр</button>
+
+			<div class="dropdown-menu">
+				<a class="dropdown-item" (click)="changeCriteria('amount')">сумма</a>
+				<a class="dropdown-item" (click)="changeCriteria('date')">дата</a>
+				<a class="dropdown-item" (click)="changeCriteria('category')">категория</a>
+				<a class="dropdown-item" (click)="changeCriteria('type')">тип</a>
+			</div>
+		</div>
+	</div>
+
 	<table class="table">
 		<thead>
 			<tr>
@@ -12,7 +30,7 @@
 		</thead>
 
 		<tbody>
-			<tr *ngFor="let e of events; let idx = index;">
+			<tr *ngFor="let e of events | wfmFilter:searchValue; let idx = index;">
 				<td>{{ idx + 1 }}</td>
 				<td>{{ e.amount | number:'1.2' }}</td>
 				<td>{{ e.date | wfmMoment:'DD.MM.YYYY HH:mm:ss' }}</td>
