@@ -21,7 +21,7 @@
   ],
   "bill": [
     {
-      "value": 0,
+      "value": 301100,
       "currency": "RUB",
       "id": 1
     }
@@ -46,6 +46,11 @@
       "name": "df",
       "capacity": 1,
       "id": 10
+    },
+    {
+      "name": "авто",
+      "capacity": 100000,
+      "id": 11
     }
   ],
   "events": [
@@ -96,6 +101,38 @@
       "date": "21.12.2017 19:57:43",
       "description": "teet",
       "id": 6
+    },
+    {
+      "type": "income",
+      "amount": 100100,
+      "category": 10,
+      "date": "21.12.2017 21:42:56",
+      "description": "sd",
+      "id": 7
+    },
+    {
+      "type": "income",
+      "amount": 200000,
+      "category": 10,
+      "date": "22.12.2017 21:43:42",
+      "description": "sd",
+      "id": 8
+    },
+    {
+      "type": "income",
+      "amount": 10000,
+      "category": 11,
+      "date": "21.12.2017 21:44:28",
+      "description": "ывыфвфв",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 9000,
+      "category": 11,
+      "date": "22.12.2017 21:44:53",
+      "description": "ААА",
+      "id": 10
     }
   ]
 }
