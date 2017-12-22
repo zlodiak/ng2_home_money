@@ -1,0 +1,19 @@
+@keyframes pace-spinner {
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.loader-animator{
+	display: block;
+	animation: pace-spinner 400ms linear infinite;
+	border: 2px solid red;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	z-index: 2000;
+	margin: auto;
+}

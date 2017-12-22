@@ -56,6 +56,11 @@
       "name": "sdf2222",
       "capacity": 1111,
       "id": 12
+    },
+    {
+      "name": "dsfg",
+      "capacity": 1,
+      "id": 13
     }
   ],
   "events": [

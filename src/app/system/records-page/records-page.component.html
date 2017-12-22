@@ -2,7 +2,7 @@
 	<div class="header">страница записей</div>
 
 	<div class="cells-outer" *ngIf="!isLoaded">
-		loading...
+		<wfm-loader></wfm-loader>
 	</div>
 
 	<div class="cells-outer" *ngIf="isLoaded">

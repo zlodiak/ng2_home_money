@@ -3,7 +3,7 @@
 	<button (click)="openFilter()">открыть фильтр</button>
 	<hr>
 
-	<div *ngIf="!isLoaded">Loading</div>
+	<div *ngIf="!isLoaded"><wfm-loader></wfm-loader></div>
 
 	<div *ngIf="isLoaded">
 		<wfm-history-chart [data]="chartData"></wfm-history-chart>
