@@ -21,7 +21,7 @@
   ],
   "bill": [
     {
-      "value": 301100,
+      "value": 300977,
       "currency": "RUB",
       "id": 1
     }
@@ -51,6 +51,11 @@
       "name": "авто",
       "capacity": 100000,
       "id": 11
+    },
+    {
+      "name": "sdf2222",
+      "capacity": 1111,
+      "id": 12
     }
   ],
   "events": [
@@ -133,6 +138,14 @@
       "date": "22.12.2017 21:44:53",
       "description": "ААА",
       "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 123,
+      "category": 12,
+      "date": "22.12.2017 20:07:16",
+      "description": "ewrwe",
+      "id": 11
     }
   ]
 }
