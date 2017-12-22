@@ -21,6 +21,8 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
 
 	s1: Subscription;
 
+  isFilterVisible = false;
+
 	categories: Category[] = [];
 	events: WFMEvent[] = [];
 
@@ -60,4 +62,19 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
   	if(this.s1) this.s1.unsubscribe();
   }
 
+  openFilter() {
+    this.toggleFilterVisibility(true);
+  }
+
+  private toggleFilterVisibility(dir: boolean) {
+    this.isFilterVisible = dir;
+  }
+
+  onFilterApply(filterData) {
+    console.log(filterData);
+  }
+
+  onFilterCancel() {
+    this.toggleFilterVisibility(false);
+  }
 }

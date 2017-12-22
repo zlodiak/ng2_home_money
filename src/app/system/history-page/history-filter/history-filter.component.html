@@ -1,3 +1,39 @@
-<p>
-  history-filter works!
-</p>
+<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="closeFilter()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="line">
+        	<select id="period" [(ngModel)]="selectedPeriod">
+        		<option *ngFor="let p of timePeriods" [value]="p.type">{{ p.label }}</option>
+        	</select>
+        </div>
+
+        <div class="line">
+        	<label>выберите тип события</label>
+        	<label *ngFor="let t of types">
+	        	<input class="checkbox" type="checkbox" [value]="t.type" (change)="handleChangeType($event.target)">
+	        	<span>{{ t.label }}</span>
+        	</label>
+        </div>
+
+        <div class="line">
+        	<label>выберите категории</label>
+        	<label *ngFor="let c of categories">
+	        	<input class="checkbox" type="checkbox" [value]="c.id" (change)="handleChangeCategory($event.target)">
+	        	<span>{{ c.name }}</span>
+        	</label>
+        </div>        
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="closeFilter()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="applyFilter()">Save changes/</button>
+      </div>
+    </div>
+  </div>
+</div> 

@@ -1,5 +1,6 @@
 <div class="wrap">
 	<div class="header">страничка истории</div>
+	<button (click)="openFilter()">открыть фильтр</button>
 	<hr>
 
 	<div *ngIf="!isLoaded">Loading</div>
@@ -9,6 +10,8 @@
 
 		<wfm-history-events [categories]="categories" [events]="events"></wfm-history-events>
 
-		<wfm-history-filter></wfm-history-filter>
+		<div *ngIf="isFilterVisible">
+			<wfm-history-filter (onFilterApply)="onFilterApply($event)" (onFilterCancel)="onFilterCancel()" [categories]="categories"></wfm-history-filter>
+		</div>
 	</div>
 </div>
