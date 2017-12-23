@@ -1,4 +1,6 @@
 # HomeMoney
+videotutorial: http://ang.overfix.ru/videokurs/part2.html#lesblock
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
